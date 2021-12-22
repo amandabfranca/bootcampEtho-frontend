@@ -1,4 +1,5 @@
 import styled, {css} from "styled-components";
+import { isPropertySignature } from "typescript";
 
 const Primary = css` 
 color: ${props => props.theme.palette.typography.primary}; 
@@ -29,3 +30,4 @@ ${Hover}
 `
 
 export default Button
+

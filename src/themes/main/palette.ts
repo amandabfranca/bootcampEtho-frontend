@@ -2,7 +2,8 @@ const core ={
     primary: '#e31a13',
     secondary: '#1a1a1a',
     primaryHover: '#C9211B',
-    baseBackground: 'transparente',
+    baseBackground: 'transparent',
+    whiteBackground: 'white',
 }
 
 const typography = {
