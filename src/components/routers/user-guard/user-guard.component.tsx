@@ -1,23 +1,28 @@
 import {useSelector} from "react-redux";
-import {State} from "../../../store/store/store.types";
 import {useEffect} from "react";
-import {useNavigate} from "react-router-dom";
-import { LoginPath } from "../../../screens/login/login.types";
+import {useLocation, useNavigate} from "react-router-dom"
+import {LoginPath} from "../../../screens/login/login.types";
+import {isAuthenticated} from "../../../store/user/user.selectors";
 
-export default function UserGuard({children}: any) {
-    const isUserAuthenticated = useSelector((state: State) => !!state.user.data)
+export default function UserGuard({ children }: any) {
+    const isUserAuthenticated = useSelector(isAuthenticated)
     const navigate = useNavigate()
+    const from = useLocation()
 
     useEffect(
         () => {
             if (!isUserAuthenticated) {
-                navigate(LoginPath)
+                navigate(LoginPath, {
+                    state: { from }
+                })
             }
         },
         [isUserAuthenticated]
+        
     )
+    
 
    if (isUserAuthenticated) return children
 
-        return null
-    }
+   return <></>
+}
