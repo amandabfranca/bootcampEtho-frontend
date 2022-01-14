@@ -2,7 +2,7 @@
 # Bootcamp Etho Soluções
 ## Projeto "Netflix"
 
-#### Concluído e Disponível em : http://netflix-react-web-1.0.s3-website-sa-east-1.amazonaws.com/login
+#### Disponível em : http://netflix-react-web-1.0.s3-website-sa-east-1.amazonaws.com/login
 
 
 
